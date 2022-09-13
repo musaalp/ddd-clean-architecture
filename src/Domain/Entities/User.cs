@@ -1,22 +1,24 @@
-﻿using System;
+﻿using Domain.ValueObjects;
 
 namespace Domain.Entities
 {
     internal class User
     {
-        public User(string name)
+        public User(UserId userId, string name)
         {
+            UserId = userId;
             Name = name;
         }
 
-        public string Name { get; private set; }
+        public UserId UserId { get; }
+        public string Name { get; }
 
-        public static User CreateNew(string name)
+        public static User Create(UserId userId, string name)
         {
             if (!string.IsNullOrEmpty(name))
                 throw new ArgumentNullException(nameof(name));
 
-            return new User(name);
+            return new User(userId, name);
         }
     }
 }
