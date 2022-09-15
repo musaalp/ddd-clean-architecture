@@ -2,7 +2,7 @@
 
 namespace Domain.Entities
 {
-    internal class User
+    public class User
     {
         public User(UserId userId, string name)
         {
