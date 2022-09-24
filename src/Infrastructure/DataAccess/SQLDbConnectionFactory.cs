@@ -5,12 +5,12 @@ using System.Data.SqlClient;
 
 namespace Infrastructure.DataAccess
 {
-    public class MSSqlConnectionFactory : IMSSqlConnectionFactory
+    public class SQLDbConnectionFactory : ISQLDbConnectionFactory
     {
         private readonly IConfiguration _configuration;
-        private readonly MSSqlDbConfiguration _dbConfiguration;
+        private readonly SQLServerDbConfiguration _dbConfiguration;
 
-        public MSSqlConnectionFactory(IConfiguration configuration, MSSqlDbConfiguration dbConfiguration)
+        public SQLDbConnectionFactory(IConfiguration configuration, SQLServerDbConfiguration dbConfiguration)
         {
             _configuration = configuration;
             _dbConfiguration = dbConfiguration;

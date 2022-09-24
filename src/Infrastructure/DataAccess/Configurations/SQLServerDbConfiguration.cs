@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.DataAccess.Configurations
 {
-    public class MSSqlDbConfiguration
+    public class SQLServerDbConfiguration
     {
         public string Server { get; set; }
         public string Schema { get; set; }

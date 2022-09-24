@@ -5,9 +5,9 @@ namespace Infrastructure.DataAccess.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly IMSSqlConnectionFactory _connectionFactory;
+        private readonly ISQLDbConnectionFactory _connectionFactory;
 
-        public UserRepository(IMSSqlConnectionFactory connectionFactory)
+        public UserRepository(ISQLDbConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;
         }
