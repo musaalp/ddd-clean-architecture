@@ -4,7 +4,7 @@ namespace WebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UsersController : ControllerBase
+    public class AppointmentsController : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> Get()
